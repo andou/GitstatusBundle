@@ -32,10 +32,9 @@
 
 namespace Andou\GitstatusBundle\Command;
 
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Output\OutputInterface;
 
-abstract class GitstatusCommand extends ContainerAwareCommand {
+abstract class GitstatusCommand extends Symfony\Component\Console\Command\Command {
 
   /**
    * 
@@ -52,7 +51,7 @@ abstract class GitstatusCommand extends ContainerAwareCommand {
    * @return \Andou\GitstatusBundle\Api\GitStatusApi
    */
   protected function getApi() {
-    return $this->getContainer()->get('andou_gitstatus.api');
+    return new Andou\GitstatusBundle\Api\GitStatusApi();
   }
 
   /**
@@ -60,7 +59,7 @@ abstract class GitstatusCommand extends ContainerAwareCommand {
    * @return \Andou\GitstatusBundle\Output\OutputStyle
    */
   protected function getStyles() {
-    return $this->getContainer()->get('andou_gitstatus.styles');
+    return new \Andou\GitstatusBundle\Output\OutputStyle();
   }
 
   /**
@@ -68,7 +67,8 @@ abstract class GitstatusCommand extends ContainerAwareCommand {
    * @return \Andou\GitstatusBundle\Output\Renderer
    */
   protected function getRenderer($output) {
-    return $this->getContainer()->get('andou_gitstatus.renderer')->setOutput($output);
+    $renderer = new \Andou\GitstatusBundle\Output\Renderer();
+    return $renderer->setOutput($output);
   }
 
 }

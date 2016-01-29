@@ -49,39 +49,25 @@ class GitStatusApi {
    *
    * @var string
    */
-  protected $baseurl;
+  protected $baseurl = "https://status.github.com/api";
 
   /**
    *
    * @var string 
    */
-  protected $statusurl;
+  protected $statusurl = "status.json";
 
   /**
    *
    * @var string
    */
-  protected $messagesurl;
+  protected $messagesurl = "messages.json";
 
   /**
    *
    * @var string
    */
-  protected $lastmessageurl;
-
-  /**
-   * 
-   * @param string $baseurl
-   * @param string $statusurl
-   * @param string $messagesurl
-   * @param string $lastmessageurl
-   */
-  function __construct($baseurl, $statusurl, $messagesurl, $lastmessageurl) {
-    $this->baseurl = $baseurl;
-    $this->statusurl = $statusurl;
-    $this->messagesurl = $messagesurl;
-    $this->lastmessageurl = $lastmessageurl;
-  }
+  protected $lastmessageurl = "last-message.json";
 
   /**
    * 

@@ -39,7 +39,7 @@ class GitstatusLastMessageCommand extends GitstatusCommand {
 
   protected function configure() {
     $this
-            ->setName('gitstatus:last')
+            ->setName('github:status_last')
             ->setDescription('Checks the Github health status with last status message')
     ;
   }

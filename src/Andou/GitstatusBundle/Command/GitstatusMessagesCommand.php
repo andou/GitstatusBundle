@@ -39,7 +39,7 @@ class GitstatusMessagesCommand extends GitstatusCommand {
 
   protected function configure() {
     $this
-            ->setName('gitstatus:messages')
+            ->setName('github:status_messages')
             ->setDescription('Checks the Github health status with status messages')
     ;
   }

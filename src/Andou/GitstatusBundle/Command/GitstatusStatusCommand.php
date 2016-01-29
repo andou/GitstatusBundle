@@ -39,7 +39,7 @@ class GitstatusStatusCommand extends GitstatusCommand {
 
   protected function configure() {
     $this
-            ->setName('gitstatus:status')
+            ->setName('github:status')
             ->setDescription('Checks the Github health status')
     ;
   }

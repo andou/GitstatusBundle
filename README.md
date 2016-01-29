@@ -3,15 +3,15 @@
 This bundle adds these commands
 ### Github health current status
 ```
-gitstatus:status
+github:status
 ```
 ### Github health current status with message
 ```
-gitstatus:last
+github:status_last
 ```
 ### Github health current status with last messages
 ```
-gitstatus:messages
+github:status_messages
 ```
 ## Installation
 Via composer:

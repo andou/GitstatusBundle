@@ -34,7 +34,7 @@ namespace Andou\GitstatusBundle\Command;
 
 use Symfony\Component\Console\Output\OutputInterface;
 
-abstract class GitstatusCommand extends Symfony\Component\Console\Command\Command {
+abstract class GitstatusCommand extends \Symfony\Component\Console\Command\Command {
 
   /**
    * 

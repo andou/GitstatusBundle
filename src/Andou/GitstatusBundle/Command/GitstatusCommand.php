@@ -51,7 +51,7 @@ abstract class GitstatusCommand extends \Symfony\Component\Console\Command\Comma
    * @return \Andou\GitstatusBundle\Api\GitStatusApi
    */
   protected function getApi() {
-    return new Andou\GitstatusBundle\Api\GitStatusApi();
+    return new \Andou\GitstatusBundle\Api\GitStatusApi();
   }
 
   /**
